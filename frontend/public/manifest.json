@@ -1,0 +1,46 @@
+{
+  "short_name": "My To-Do",
+  "name": "My To-Do App",
+  "description":"To-Do Application For dally write your task list.",
+  "icons": [
+    {
+      "src": "./16.png",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./32.png",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./64.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./1024.png",
+      "sizes": "1024x1024",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./icon-192-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./wide310x150Log.png",
+      "type": "image/png",
+      "sizes": "310x150"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#27272a",
+  "background_color": "#27272a"
+}
