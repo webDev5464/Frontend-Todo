@@ -16,22 +16,21 @@ const CreateTodo = () => {
   });
 
   // ? Form handel
-  const createTodoList = (e) => {
-    //? Can not reload browser at submit form
-    e.preventDefault();
+  // const createTodoList = (e) => {
+  //   //? Can not reload browser at submit form
+  //   e.preventDefault();
 
-    //? data send inside database
-    axios
-      .post("https://todo-app-72er.onrender.com/todoData", todo)
-      .then((x) => {
-        alert(x.data.message);
+  //   //? data send inside database
+  //   axios
+  //     .post("https://todo-app-72er.onrender.com/todoData", todo)
+  //     .then((x) => {
+  //       alert(x.data.message);
 
-        //? Not reload browser and add data in frontend backend
-        setRef(ref + 1);
-      });
-  };
-
-  /*
+  //       //? Not reload browser and add data in frontend backend
+  //       setRef(ref + 1);
+  //     });
+  // };
+  
   const createTodoList = (e) => {
     //? Can not reload browser at submit form
     e.preventDefault();
@@ -43,7 +42,6 @@ const CreateTodo = () => {
       setRef(ref + 1);
     });
   };
-  */
  
   //? onChange
   const todoDetail = (e) => {

@@ -15,42 +15,42 @@ function App() {
   const [renderTodo, setRenderTodo] = useState([]);
 
   //! Render data
-  const todo = async () => {
-    await axios
-      .get("https://todo-app-72er.onrender.com/renderTodo")
-      .then((x) => {
-        setRenderTodo(x.data.RenderTodoData);
-      });
-  };
-
   // const todo = async () => {
-  //   await axios.get("http://localhost:3005/renderTodo").then((x) => {
-  //     setRenderTodo(x.data.RenderTodoData);
-  //   });
+  //   await axios
+  //     .get("https://todo-app-72er.onrender.com/renderTodo")
+  //     .then((x) => {
+  //       setRenderTodo(x.data.RenderTodoData);
+  //     });
   // };
+
+  const todo = async () => {
+    await axios.get("http://localhost:3005/renderTodo").then((x) => {
+      setRenderTodo(x.data.RenderTodoData);
+    });
+  };
 
   useEffect(() => {
     todo();
   }, []);
 
   //! Remove Data
-  const RemoveTodo = async (id) => {
-    await axios
-      .delete(`https://todo-app-72er.onrender.com/deleteTodo/${id}`)
-      .then((x) => {
-        alert(x.data.message);
-      });
-    setRef(ref - 1);
-  };
-
   // const RemoveTodo = async (id) => {
   //   await axios
-  //     .delete(`http://localhost:3005/deleteTodo/${id}`)
+  //     .delete(`https://todo-app-72er.onrender.com/deleteTodo/${id}`)
   //     .then((x) => {
   //       alert(x.data.message);
   //     });
   //   setRef(ref - 1);
   // };
+
+  const RemoveTodo = async (id) => {
+    await axios
+      .delete(`http://localhost:3005/deleteTodo/${id}`)
+      .then((x) => {
+        alert(x.data.message);
+      });
+    setRef(ref - 1);
+  };
 
   return (
     <section className="bg-zinc-800 text-white select-none">

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../App";
 
 const TodoList = () => {
-  const { renderTodo } = useContext(Context);
+  const { renderTodo, RemoveTodo } = useContext(Context);
 
   const Render = ({ r }) => {
     return (
@@ -17,16 +17,15 @@ const TodoList = () => {
             <span>Date : {r.date}</span> <span>Time : {r.time}</span>
           </p>
           <p className="p-2">Description : {r.des}</p>
-          {/* <hr className="bg-black" />
+          <hr className="bg-black" />
           <div className="flex justify-end my-5">
             <button
-              onClick={() => RemoveTodo(r._id)}
-              disabled
+              onClick={() => RemoveTodo(r._id)}              
               className="bg-red-500 text-black rounded-md p-1 font-semibold cursor-pointer hover:bg-red-600"
             >
               Delete List
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
     );
